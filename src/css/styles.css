@@ -1,0 +1,180 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  height: 100%;
+  background: #fff;
+  font-size: 16px;
+  line-height: 25px;
+  font-family: 'NoirPro-Regular';
+  min-width: 320px;
+  color: #58595B; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+a {
+  color: #311746;
+  text-decoration: none; }
+  a:hover {
+    color: #502a70; }
+  a:focus {
+    outline: none; }
+
+i {
+  color: #4968AD; }
+
+button {
+  cursor: pointer; }
+  button:focus {
+    outline: none; }
+  button:hover {
+    background: transparent;
+    color: #E73348;
+    border: 1px solid #E73348; }
+
+img {
+  width: 100%;
+  height: auto; }
+
+* {
+  box-sizing: border-box; }
+
+#wrapper {
+  overflow: hidden; }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700; }
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px; }
+  .row .col {
+    flex-basis: 0;
+    flex-grow: 1;
+    max-width: 100%;
+    padding: 0 15px; }
+
+.container {
+  margin: 0 auto;
+  max-width: 1350px;
+  padding: 0 15px; }
+
+.btn {
+  font-size: 16px;
+  line-height: 21px;
+  padding: 20px 30px;
+  background: #E73348;
+  color: #fff;
+  border-radius: 7px;
+  border: none; }
+
+.mobile-menu-navigation {
+  position: fixed;
+  z-index: 25;
+  top: 0;
+  bottom: 0;
+  right: 200%;
+  max-width: 865px;
+  background-color: #fff;
+  transition: all .25s ease;
+  overflow: auto;
+  box-shadow: -24px 0px 24px -12px rgba(34, 60, 80, 0.2); }
+  .mobile-menu-navigation .navigation {
+    display: block;
+    padding: 60px 107px 50px 60px; }
+    .mobile-menu-navigation .navigation li {
+      margin-bottom: 25px; }
+
+.show-menu {
+  right: 0; }
+
+.btn-menu {
+  position: absolute;
+  top: 7px;
+  right: 15px;
+  height: 27px;
+  width: 29px;
+  cursor: pointer;
+  transition: all .25s ease;
+  display: none;
+  z-index: 103; }
+  @media only screen and (max-width: 767px) {
+    .btn-menu {
+      display: block; } }
+  .btn-menu span {
+    background: #213041;
+    border: none;
+    height: 2px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: all .35s ease;
+    cursor: pointer; }
+  .btn-menu .middle {
+    top: 8px; }
+  .btn-menu .bottom {
+    top: 16px; }
+  .btn-menu.active .top {
+    transform: translateY(8px) translateX(0) rotate(45deg); }
+  .btn-menu.active .middle {
+    opacity: 0; }
+  .btn-menu.active .bottom {
+    transform: translateY(-8px) translateX(0) rotate(-45deg); }
+
+@font-face {
+  font-family: 'NoirPro-Bold';
+  src: url("../fonts/NoirPro-Bold.woff2") format("woff2"), url("../fonts/NoirPro-Bold.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'NoirPro-Regular';
+  src: url("../fonts/NoirPro-Regular.woff2") format("woff2"), url("../fonts/NoirPro-Regular.woff") format("woff");
+  font-weight: normal;
+  font-style: normal; }
