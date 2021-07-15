@@ -1,30 +1,40 @@
-.mobile-menu-navigation {
-  position: fixed;
+.menu-navigation {
+  position: absolute;
   z-index: 25;
-  top: 0;
+  top: 84px;
   bottom: 0;
-  right: 200%;
-  max-width: 865px;
-  background-color: #fff;
-  transition: all .25s ease;
-  overflow: auto;
-  box-shadow: -24px 0px 24px -12px rgba(34, 60, 80, 0.2);
+  display: none;
+  right: 0;
+  width: 200px;
+  background: #fff;
+
 
   .navigation {
     display: block;
-    padding: 60px 107px 50px 60px;
+    padding: 20px 44px 21px 60px;
+    background: #fff;
+    box-shadow: 0 8px 17px -2px rgba(34, 60, 80, 0.25);
+    border-radius: 5px;
+    }
 
     li {
-      margin-bottom: 25px;
+      position: relative;
+      margin-bottom: 0;
+      text-align: right;
+
+      a {
+        &:hover {
+          text-decoration: underline;
+        }
+      }
     }
-  }
 }
 
 .show-menu {
-  right: 0;
+  display: block;
 }
 
-$mobile: 767px;
+$mobile: 3000px;
 
 @mixin breakpoint($rule){
   @media only screen and (max-width: #{$rule}){
@@ -34,50 +44,28 @@ $mobile: 767px;
 
 .btn-menu {
   position: absolute;
-  top: 7px;
-  right: 15px;
-  height: 27px;
-  width: 29px;
+  top: 11px;
+  right: 0;
+  height: 50px;
+  width: 50px;
   cursor: pointer;
-  transition: all .25s ease;
   display: none;
   z-index: 103;
+  background: transparent;
+  border: dotted 1px #9A9A9A;
+  padding: 0 17px;
 
   @include breakpoint($mobile) {
     display: block;
   }
 
   span {
-    background: #213041;
-    border: none;
-    height: 2px;
-    width: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    transition: all .35s ease;
-    cursor: pointer;
-  }
-
-  .middle {
-    top: 8px;
-  }
-
-  .bottom {
-    top: 16px;
-  }
-
-  &.active {
-    .top {
-      transform: translateY(8px) translateX(0) rotate(45deg);
-    }
-
-    .middle {
-      opacity: 0;
-    }
-
-    .bottom {
-      transform: translateY(-8px) translateX(0) rotate(-45deg);
-    }
+    display: block;
+    width: 0;
+    height: 0;
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+    border-top: 11px solid #E73348;
+    border-radius: 3px;
   }
 }

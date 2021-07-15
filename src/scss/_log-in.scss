@@ -1,0 +1,150 @@
+.log-in-page {
+  .header {
+    margin-bottom: 0;
+  }
+
+  .check-in {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 355px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 140px;
+
+    .title {
+      font-size: 30px;
+      line-height: 41px;
+      color: #311746;
+      margin-bottom: 38px;
+    }
+
+    .form-group {
+      width: 355px;
+      margin-bottom: 20px;
+
+      input {
+        width: 100%;
+        height: 70px;
+        font-size: 16px;
+        line-height: 16px;
+        padding: 8px 16px;
+        border: none;
+        background: #fff;
+        box-shadow: 0 0 13px -4px rgba(34, 60, 80, 0.2);
+
+        &::placeholder {
+          font-size: 18px;
+          line-height: 25px;
+          color: #837490;
+        }
+
+        &:focus {
+          outline: none;
+        }
+      }
+    }
+
+    .excerpt {
+      font-size: 18px;
+      line-height: 25px;
+      color: #311746;
+      width: 100%;
+      margin-bottom: 45px;
+
+      a {
+        color: #E73348;
+        text-decoration: underline;
+        padding-left: 12px;
+
+        &:hover {
+          text-decoration: none;
+        }
+      }
+    }
+
+    .btn {
+      font-size: 20px;
+      line-height: 24px;
+      font-weight: 700;
+      width: 100%;
+      margin-bottom: 45px;
+    }
+
+    .socials-area {
+      width: 100%;
+
+      .excerpt {
+        padding-left: 33px;
+      }
+    }
+
+    .title-socials {
+      display: block;
+      text-align: center;
+      font-size: 24px;
+      line-height: 33px;
+      color: #311746;
+      margin-bottom: 19px;
+    }
+
+    .socials-btn {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 40px;
+
+      .btn-facebook,
+      .btn-google {
+        background: transparent;
+        padding: 19px 37px;
+        color: #4968AD;
+        border-radius: 3px;
+        display: flex;
+        align-items: center;
+        border: solid 1px #4968AD;
+
+        i {
+          font-size: 20px;
+          color: #4968AD;
+          padding-right: 12px;
+        }
+      }
+
+      .btn-google {
+        border: solid 1px #E73348;
+        color: #E73348;
+
+        i {
+          color: #E73348;
+        }
+      }
+    }
+  }
+
+  .footer-area {
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  @media (max-width: 767px) {
+    .check-in {
+        .form-group {
+          width: 287px;
+        }
+
+        .socials-btn {
+          .btn-facebook,
+          .btn-google {
+            padding: 15px 25px;
+          }
+        }
+
+      .socials-area {
+        .excerpt {
+          padding-left: 0;
+        }
+      }
+    }
+  }
+}
