@@ -6,16 +6,15 @@
   display: none;
   right: 0;
   width: 200px;
-  background: #fff;
+  background: $white;
 
 
   .navigation {
     display: block;
     padding: 20px 44px 21px 60px;
-    background: #fff;
+    background: $white;
     box-shadow: 0 8px 17px -2px rgba(34, 60, 80, 0.25);
     border-radius: 5px;
-    }
 
     li {
       position: relative;
@@ -28,13 +27,12 @@
         }
       }
     }
+  }
 }
 
 .show-menu {
   display: block;
 }
-
-$mobile: 3000px;
 
 @mixin breakpoint($rule){
   @media only screen and (max-width: #{$rule}){
@@ -43,29 +41,17 @@ $mobile: 3000px;
 }
 
 .btn-menu {
-  position: absolute;
-  top: 11px;
-  right: 0;
-  height: 50px;
-  width: 50px;
-  cursor: pointer;
-  display: none;
   z-index: 103;
   background: transparent;
   border: dotted 1px #9A9A9A;
-  padding: 0 17px;
-
-  @include breakpoint($mobile) {
-    display: block;
-  }
+  padding: 20px 17px;
+  margin-left: 55px;
 
   span {
     display: block;
-    width: 0;
-    height: 0;
     border-left: 7px solid transparent;
     border-right: 7px solid transparent;
-    border-top: 11px solid #E73348;
+    border-top: 11px solid $red;
     border-radius: 3px;
   }
 }

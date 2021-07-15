@@ -3,12 +3,7 @@
   margin-bottom: 73px;
 }
 
-.header-wrapper {
-  position: relative;
-}
-
 .header-content {
-  padding: 0 86px 0 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -19,48 +14,53 @@
       }
     }
 
-  .username {
+  .username-block {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    position: relative;
 
-    .text-user {
-      color: #E73348;
-      margin-left: 11px;
-      letter-spacing: 1px;
+    .user {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
 
-      h3 {
-        font-size: 14px;
-        line-height: 20px;
-      }
+      .text-user {
+        color: $red;
+        margin-left: 11px;
+        letter-spacing: 1px;
 
-      .name {
-        font-size: 16px;
-        line-height: 21px;
-        font-weight: 700;
+        h3 {
+          font-size: 14px;
+          line-height: 20px;
+        }
+
+        .name {
+          font-size: 16px;
+          line-height: 21px;
+          font-weight: 700;
+        }
       }
     }
   }
 }
 
-.authors {
-  margin: 0 85px 0 100px;
-
-  .authors-heading {
+.authors-heading {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 39px;
+    padding: 0 100px;
 
     .title-authors {
       font-weight: 700;
       font-size: 48px;
       line-height: 58px;
-      color: #E73348;
+      color: $red;
       letter-spacing: 2px;
 
       b {
-        color: #311746;
+        color: $purple;
       }
     }
 
@@ -81,7 +81,7 @@
       }
 
       input {
-        background: #FFF7F7;
+        background: $tender;
         border-radius: 4px;
         height: 48px;
         font-size: 14px;
@@ -94,69 +94,15 @@
           outline: none;
         }
 
-        ::placeholder {
+        &::placeholder {
          color: #837490;
         }
       }
     }
   }
-}
-
-.footer {
-  padding: 30px 0;
-}
-
-.footer-area {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
-  .all-rights {
-    display: flex;
-
-    li {
-      margin-right: 21px;
-    }
-  }
-
-  .link {
-    display: block;
-    font-size: 14px;
-    line-height: 20px;
-    color: #311746;
-    opacity: 0.5;
-
-    &:hover {
-      text-decoration: underline;
-    }
-  }
-}
 
 .slider {
   margin-bottom: 188px;
-  position: relative;
-
-  &:after,
-  &:before {
-    content: "";
-    position: absolute;
-    background: #fff;
-    opacity: 0.2;
-    top: 0;
-    bottom: 0;
-    width: 5%;
-    height: 100%;
-    z-index: 10;
-  }
-
-  &:after {
-    left: 0;
-  }
-
-  &:before {
-    background: #fff;
-    right: 0;
-  }
 
   .draggable {
     padding: 0 55px!important;
@@ -204,41 +150,41 @@
     }
 
     .content-img {
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        color: #fff;
-        padding: 0 20px 20px;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      color: $white;
+      padding: 0 20px 20px;
 
-        .title {
-          display: block;
-          font-size: 30px;
-          line-height: 36px;
-          margin-bottom: 12px;
-          padding-right: 10px;
-        }
+      .title {
+        display: block;
+        font-size: 30px;
+        line-height: 36px;
+        margin-bottom: 12px;
+        padding-right: 10px;
+      }
 
-        .text {
-          font-size: 18px;
-          line-height: 24px;
-          margin-bottom: 21px;
-          padding-right: 30px;
-          overflow: hidden;
-          height: 50px;
-        }
+      .text {
+        font-size: 18px;
+        line-height: 24px;
+        margin-bottom: 21px;
+        padding-right: 30px;
+        overflow: hidden;
+        height: 50px;
+      }
 
-        .btn {
-          width: 100%;
-        }
+      .btn {
+        width: 100%;
       }
     }
+  }
 
   .slick-prev,
   .slick-next {
     font-size: 0;
     border: none;
-    background: #E73348;
+    background: $red;
     padding: 35px;
     border-radius: 50%;
     position: relative;
@@ -278,6 +224,34 @@
   }
 }
 
+.footer {
+  padding: 30px 0;
+}
+
+.footer-area {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .footer-navigation {
+    display: flex;
+
+    li {
+      margin-right: 21px;
+    }
+  }
+
+  .text-template {
+    font-size: 14px;
+    line-height: 20px;
+    color: $purple;
+    opacity: 0.5;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
 
 
 

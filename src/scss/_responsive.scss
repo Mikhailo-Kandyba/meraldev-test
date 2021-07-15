@@ -1,18 +1,11 @@
 @media (max-width: 1023px) {
   .header {
+    padding: 20px 0 0;
     margin-bottom: 20px;
   }
 
-  .menu-navigation {
-    right: 17px;
-  }
-
-  .btn-menu {
-    right: 16px;
-  }
-
-  .authors {
-    margin: 0;
+  .authors-heading {
+    padding: 0;
   }
 
   .slider {
@@ -50,22 +43,20 @@
     }
   }
 
-  .authors {
-    .authors-heading {
+  .authors-heading {
       flex-direction: column;
       align-items: end;
 
       .title-authors {
         font-size: 36px;
         line-height: 44px;
-        max-width: 200px;
+        max-width: 170px;
       }
 
       .form-group {
         width: 290px;
       }
     }
-  }
 
   .slider {
     .slick-arrow {

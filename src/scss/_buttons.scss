@@ -2,8 +2,14 @@
   font-size: 16px;
   line-height: 21px;
   padding: 20px 30px;
-  background: #E73348;
-  color: #fff;
+  background: $red;
+  color: $white;
   border-radius: 3px;
-  border: solid 1px #E73348;
+  border: solid 1px $red;
+
+  &:hover {
+    background: transparent;
+    color: $red;
+    border: 1px solid $red;
+  }
 }

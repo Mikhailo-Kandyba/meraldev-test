@@ -30,7 +30,7 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
   height: 100%;
-  background: #fff;
+  background: $white;
   font-size: 16px;
   line-height: 25px;
   font-family: 'NoirPro-Regular';
@@ -54,7 +54,7 @@ table {
 }
 
 a {
-  color: #311746;
+  color: $purple;
   text-decoration: none;
 
   &:hover {
@@ -75,12 +75,6 @@ button {
 
   &:focus {
     outline: none;
-  }
-
-  &:hover {
-    background: transparent;
-    color: #E73348;
-    border: 1px solid #E73348;
   }
 }
 
