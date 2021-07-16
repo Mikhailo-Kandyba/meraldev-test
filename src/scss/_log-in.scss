@@ -1,19 +1,16 @@
+@import "variables";
 .log-in-page {
   .header {
     margin-bottom: 0;
   }
 
-  .box {
+  .log-in-form {
     max-width: 355px;
     margin-right: auto;
     margin-left: auto;
   }
 
-  .authorization {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  .authorization-form {
     margin-bottom: 45px;
 
     .title-authorization {
@@ -48,37 +45,23 @@
         }
       }
     }
-
-    .btn {
-      font-size: 20px;
-      line-height: 24px;
-      font-weight: 700;
-      width: 100%;
-    }
   }
 
-  .socials-area {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+  .title-socials {
+    text-align: center;
+    font-size: 24px;
+    line-height: 33px;
+    color: $purple;
+    margin-bottom: 19px;
+  }
 
-    .title-socials {
-      display: block;
-      text-align: center;
-      font-size: 24px;
-      line-height: 33px;
-      color: $purple;
-      margin-bottom: 19px;
-    }
-
-    .socials-btn {
+  .socials-btn {
       display: flex;
       justify-content: space-between;
       margin-bottom: 40px;
 
       .btn-facebook,
       .btn-google {
-        background: transparent;
         padding: 19px 37px;
         color: $dark-violet;
         border-radius: 3px;
@@ -102,13 +85,11 @@
         }
       }
     }
-  }
 
   .excerpt {
     font-size: 18px;
     line-height: 25px;
     color: $purple;
-    width: 100%;
     margin-bottom: 45px;
 
     a {
@@ -125,26 +106,5 @@
   .footer-area {
     display: flex;
     justify-content: flex-end;
-  }
-  
-  @media (max-width: 767px) {
-    .authorization {
-      .form-group {
-        width: 287px;
-      }
-    }
-
-    .socials-area {
-      .socials-btn {
-        .btn-facebook,
-        .btn-google {
-          padding: 15px 25px;
-        }
-      }
-
-      .excerpt {
-          padding-left: 0;
-        }
-      }
   }
 }

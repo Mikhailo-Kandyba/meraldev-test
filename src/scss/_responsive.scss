@@ -1,3 +1,9 @@
+@import "variables";
+@media (max-width: 1115px) {
+  .authors-heading {
+    padding: 0;
+  }
+}
 @media (max-width: 1023px) {
   .header {
     padding: 20px 0 0;
@@ -27,10 +33,31 @@
         width: 170px;
       }
     }
+
+    .username-block {
+      .user {
+        img {
+          width: 40px;
+        }
+      }
+    }
   }
 
   .btn-menu {
     display: none;
+  }
+
+  .menu-navigation {
+    top: 55px;
+    .navigation {
+      .mobile-block {
+        display: block;
+
+        .text-user {
+          display: block;
+        }
+      }
+    }
   }
 
   .text-user {
@@ -44,23 +71,25 @@
   }
 
   .authors-heading {
-      flex-direction: column;
-      align-items: end;
+    flex-direction: column;
+    align-items: end;
+    margin-bottom: 25px;
 
-      .title-authors {
-        font-size: 36px;
-        line-height: 44px;
-        max-width: 170px;
-      }
-
-      .form-group {
-        width: 290px;
-      }
+    .title-authors {
+      font-size: 36px;
+      line-height: 44px;
+      max-width: 170px;
+      margin-bottom: 15px;
     }
+
+    .form-group {
+      width: 290px;
+    }
+  }
 
   .slider {
     .slick-arrow {
-      top: -163px;
+      top: -160px;
       transform: none;
       right: 3px;
     }
@@ -71,12 +100,13 @@
     }
 
     .slick-next {
-      left: 170px;
+      left: auto;
+      right: 65px;
     }
 
     .slick-prev {
       &:after {
-        top: 14px;
+        top: 19px;
         left: 17px;
       }
     }
@@ -96,5 +126,26 @@
 
   .footer-area {
     flex-direction: column;
+  }
+
+  .log-in-page {
+    .authorization-form {
+      .form-group {
+        width: 287px;
+      }
+    }
+
+    .socials-area {
+      .socials-btn {
+        .btn-facebook,
+        .btn-google {
+          padding: 15px 25px;
+        }
+      }
+
+      .excerpt {
+        padding-left: 0;
+      }
+    }
   }
 }

@@ -3,11 +3,8 @@
     <title>MeralDav</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <!--библиотека для карусель-->
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     <link rel="stylesheet" href="css/styles.css">
-    <!--библиотека иконок-->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 </head>
 <body>
     <div id="wrapper">
@@ -25,9 +22,15 @@
                                 <span class="name">Username</span>
                             </div>
                         </div>
-                        <button class="btn-menu"><span></span></button>
+                        <button class="btn-menu"></button>
                         <div class="menu-navigation">
                             <ul class="navigation">
+                                <li class="mobile-block">
+                                    <div class="text-user">
+                                        <h3>Hello</h3>
+                                        <span class="name">Username</span>
+                                    </div>
+                                </li>
                                 <li>
                                     <a href="#">
                                         Your Profile
@@ -47,16 +50,16 @@
         <main>
             <section class="container">
                 <div class="authors-heading">
-                        <span class="title-authors"><b>Featured</b> Creators</span>
-                        <div class="form-group">
+                    <h3 class="title-authors"><b>Featured</b> Creators</h3>
+                    <div class="form-group">
                             <input type="text" placeholder="Search">
                         </div>
-                    </div>
+                </div>
                 <div class="slider">
                     <div>
                         <img src="../images/actor-1.jpg" alt="actor">
                         <div class="content-img">
-                            <span class="title">THE RUBIN REPORT</span>
+                            <h3 class="title">THE RUBIN REPORT</h3>
                             <p class="text">Get exclusive content. Interact with Dave.
                                 Verified Nobody. My tribe is tribeless. Captain of the Fence Riding Team.
                                 Fiddling while Rome burns. Find another hero.
@@ -67,7 +70,7 @@
                     <div>
                         <img src="../images/actor-2.jpg" alt="actor">
                         <div class="content-img">
-                            <span class="title">NGO-GO ZONE</span>
+                            <h3 class="title">NGO-GO ZONE</h3>
                             <p class="text">Get exclusive content. Interact with Andy.
                                 Verified Nobody. My tribe is tribeless. Captain of the Fence Riding Team.
                                 Fiddling while Rome burns. Find another hero.
@@ -78,7 +81,7 @@
                     <div>
                         <img src="../images/actor-3.jpg" alt="actor">
                         <div class="content-img">
-                            <span class="title">Bridget Phetasy</span>
+                            <h3 class="title">Bridget Phetasy</h3>
                             <p class="text">
                                 Get exclusive content. Interact with Bridget. Verified Nobody. My tribe is tribeless.
                                 Captain of the Fence Riding Team. Fiddling while Rome burns. Find another hero.
@@ -89,7 +92,7 @@
                     <div>
                         <img src="../images/actor-4.jpg" alt="actor">
                         <div class="content-img">
-                            <span class="title">Micheal Malice</span>
+                            <h3 class="title">Micheal Malice</h3>
                             <p class="text">Get exclusive content. Interact with Micheal.
                                 Verified Nobody. My tribe is tribeless. Captain of the Fence Riding Team.
                                 Fiddling while Rome burns. Find another hero.
@@ -123,29 +126,31 @@
             </section>
         </footer>
     </div>
-    <!--библиотека для всего, для кнопки меню-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <!--библиотека для карусель-->
     <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script>
-
         $('.slider').slick({
             centerMode: true,
             centerPadding: '60px',
             slidesToShow: 3,
             responsive: [
                 {
-                    breakpoint: 1040,
+                    breakpoint: 1115,
                     settings: {
-                        centerMode: true,
                         centerPadding: '70px',
-                        slidesToShow: 1
+                        slidesToShow: 2
                     }
                 },
                 {
-                    breakpoint: 480,
+                    breakpoint: 1023,
                     settings: {
-                        centerMode: true,
+                        centerPadding: '40px',
+                        slidesToShow: 2
+                    }
+                },
+                {
+                    breakpoint: 767,
+                    settings: {
                         centerPadding: '40px',
                         slidesToShow: 1
                     }
@@ -153,12 +158,17 @@
             ]
         });
 
-        <!--js кнопка меню-->
-      $(".btn-menu").on('click', function(e) {
-          e.preventDefault();
-          $(this).toggleClass("active");
-          $(".menu-navigation").toggleClass('show-menu');
-      });
+        $(".btn-menu").on('click', function(e) {
+            e.preventDefault();
+            $(this).toggleClass("active");
+            $(".menu-navigation").toggleClass('show-menu');
+        });
+
+        $(".user").on('click', function(e) {
+            e.preventDefault();
+            $(this).toggleClass("active");
+            $(".menu-navigation").toggleClass('show-menu');
+        });
     </script>
 </body>
 </html>
