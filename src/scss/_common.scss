@@ -2,6 +2,16 @@
 .header {
   padding: 53px 0 0;
   margin-bottom: 73px;
+
+  @include breakpoint($tablet) {
+    padding: 20px 0 0;
+    margin-bottom: 20px;
+  }
+
+  @include breakpoint($mobile) {
+    padding: 35px 0 0;
+    margin-bottom: 14px;
+  }
 }
 
 .header-content {
@@ -9,9 +19,17 @@
   align-items: center;
   justify-content: space-between;
 
+  @include breakpoint($mobile) {
+    padding: 0;
+  }
+
   .logo {
     img {
       width: 195px;
+
+      @include breakpoint($mobile) {
+        width: 170px;
+      }
     }
   }
 
@@ -27,6 +45,10 @@
 
       img {
         width: 50px;
+
+        @include breakpoint($mobile) {
+          width: 40px;
+        }
       }
     }
   }
@@ -36,6 +58,10 @@
   color: $red;
   margin-left: 11px;
   letter-spacing: 1px;
+
+  @include breakpoint($mobile) {
+    display: none;
+  }
 
   h3 {
     font-size: 14px;
@@ -50,63 +76,87 @@
 }
 
 .authors-heading {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 40px;
-    padding: 0 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+  padding: 0 100px;
+  @include breakpoint($desktop) {
+    padding: 0;
+  }
 
-    .title-authors {
-      font-weight: 700;
-      font-size: 48px;
-      line-height: 58px;
-      color: $red;
-      letter-spacing: 2px;
+  @include breakpoint($mobile) {
+    flex-direction: column;
+    align-items: end;
+    margin-bottom: 25px;
+  }
 
-      b {
-        color: $purple;
-      }
+  .title-authors {
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 58px;
+    color: $red;
+    letter-spacing: 2px;
+
+    @include breakpoint($mobile) {
+      font-size: 36px;
+      line-height: 44px;
+      max-width: 170px;
+      margin-bottom: 15px;
     }
 
-    .form-group {
-      width: 260px;
-      position: relative;
-
-      &:after {
-        content: "";
-        position: absolute;
-        right: 12px;
-        top: 15px;
-        bottom: 0;
-        width: 20px;
-        height: 20px;
-        background-image: url("../images/search.svg");
-        background-repeat: no-repeat;
-      }
-
-      input {
-        background: $tender;
-        border-radius: 4px;
-        height: 48px;
-        font-size: 14px;
-        line-height: 17px;
-        border: none;
-        width: 100%;
-        padding: 10px 43px 10px 16px;
-
-        &:focus {
-          outline: none;
-        }
-
-        &::placeholder {
-         color: #837490;
-        }
-      }
+    b {
+      color: $purple;
     }
   }
 
+  .form-group {
+    width: 260px;
+    position: relative;
+
+    @include breakpoint($mobile) {
+      width: 290px;
+    }
+
+    &:after {
+      content: "";
+      position: absolute;
+      right: 12px;
+      top: 15px;
+      bottom: 0;
+      width: 20px;
+      height: 20px;
+      background-image: url("../images/search.svg");
+      background-repeat: no-repeat;
+    }
+
+    input {
+      background: $tender;
+      border-radius: 4px;
+      height: 48px;
+      font-size: 14px;
+      line-height: 17px;
+      border: none;
+      width: 100%;
+      padding: 10px 43px 10px 16px;
+
+      &:focus {
+        outline: none;
+      }
+
+      &::placeholder {
+       color: #837490;
+      }
+    }
+  }
+}
+
 .slider {
   margin-bottom: 188px;
+
+  @include breakpoint($tablet) {
+    margin-bottom: 35px;
+  }
 
   .slick-slide {
     width: 256px!important;
@@ -189,6 +239,10 @@
     position: relative;
     z-index: 20;
 
+    @include breakpoint($mobile) {
+      padding: 27px;
+    }
+
     &:after {
       content: "";
       width: 20px;
@@ -209,18 +263,49 @@
     &:after {
       top: 22px;
       transform: rotate(180deg);
+
+      @include breakpoint($mobile) {
+        top: 19px;
+        left: 17px;
+      }
     }
   }
 
-  .slick-next {
-    left: -14px;
+  .draggable {
+    @include breakpoint($mobile) {
+      padding: 0!important;
+      height: 455px;
+    }
   }
 
   .slick-arrow {
     position: absolute;
     top: 50%;
     transform: translate(0, -50%);
+
+    @include breakpoint($mobile) {
+      top: -160px;
+      transform: none;
+      right: 3px;
+    }
   }
+
+  .slick-next {
+    left: -14px;
+
+    @include breakpoint($mobile) {
+      left: auto;
+      right: 65px;
+    }
+
+    &:after {
+      @include breakpoint($mobile) {
+        top: 20px;
+        left: 17px;
+      }
+    }
+  }
+
 }
 
 .footer {
@@ -231,6 +316,10 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  @include breakpoint($mobile) {
+    flex-direction: column;
+  }
 
   .footer-navigation {
     display: flex;

@@ -120,6 +120,9 @@ h6 {
   font-weight: 700;
   width: 100%; }
 
+.btn-ml {
+  padding: 15px 25px; }
+
 .btn-transparent {
   background: transparent; }
 
@@ -132,6 +135,9 @@ h6 {
   right: 0;
   width: 210px;
   background: #fff; }
+  @media only screen and (max-width: 767px) {
+    .menu-navigation {
+      top: 55px; } }
   .menu-navigation .navigation {
     display: flex;
     flex-direction: column;
@@ -143,6 +149,12 @@ h6 {
     .menu-navigation .navigation .mobile-block {
       display: none;
       text-align: center; }
+      @media only screen and (max-width: 767px) {
+        .menu-navigation .navigation .mobile-block {
+          display: block; } }
+    @media only screen and (max-width: 767px) {
+      .menu-navigation .navigation .text-user {
+        display: block; } }
     .menu-navigation .navigation li {
       position: relative;
       margin-bottom: 0;
@@ -160,6 +172,9 @@ h6 {
   padding: 24px;
   position: relative;
   margin-left: 55px; }
+  @media only screen and (max-width: 767px) {
+    .btn-menu {
+      display: none; } }
   .btn-menu:after {
     content: '';
     position: absolute;
@@ -180,13 +195,27 @@ h6 {
 .header {
   padding: 53px 0 0;
   margin-bottom: 73px; }
+  @media only screen and (max-width: 1023px) {
+    .header {
+      padding: 20px 0 0;
+      margin-bottom: 20px; } }
+  @media only screen and (max-width: 767px) {
+    .header {
+      padding: 35px 0 0;
+      margin-bottom: 14px; } }
 
 .header-content {
   display: flex;
   align-items: center;
   justify-content: space-between; }
+  @media only screen and (max-width: 767px) {
+    .header-content {
+      padding: 0; } }
   .header-content .logo img {
     width: 195px; }
+    @media only screen and (max-width: 767px) {
+      .header-content .logo img {
+        width: 170px; } }
   .header-content .username-block {
     display: flex;
     align-items: center;
@@ -197,11 +226,17 @@ h6 {
       align-items: center; }
       .header-content .username-block .user img {
         width: 50px; }
+        @media only screen and (max-width: 767px) {
+          .header-content .username-block .user img {
+            width: 40px; } }
 
 .text-user {
   color: #E73348;
   margin-left: 11px;
   letter-spacing: 1px; }
+  @media only screen and (max-width: 767px) {
+    .text-user {
+      display: none; } }
   .text-user h3 {
     font-size: 14px;
     line-height: 20px; }
@@ -216,17 +251,34 @@ h6 {
   align-items: center;
   margin-bottom: 40px;
   padding: 0 100px; }
+  @media only screen and (max-width: 1115px) {
+    .authors-heading {
+      padding: 0; } }
+  @media only screen and (max-width: 767px) {
+    .authors-heading {
+      flex-direction: column;
+      align-items: end;
+      margin-bottom: 25px; } }
   .authors-heading .title-authors {
     font-weight: 700;
     font-size: 48px;
     line-height: 58px;
     color: #E73348;
     letter-spacing: 2px; }
+    @media only screen and (max-width: 767px) {
+      .authors-heading .title-authors {
+        font-size: 36px;
+        line-height: 44px;
+        max-width: 170px;
+        margin-bottom: 15px; } }
     .authors-heading .title-authors b {
       color: #311746; }
   .authors-heading .form-group {
     width: 260px;
     position: relative; }
+    @media only screen and (max-width: 767px) {
+      .authors-heading .form-group {
+        width: 290px; } }
     .authors-heading .form-group:after {
       content: "";
       position: absolute;
@@ -253,6 +305,9 @@ h6 {
 
 .slider {
   margin-bottom: 188px; }
+  @media only screen and (max-width: 1023px) {
+    .slider {
+      margin-bottom: 35px; } }
   .slider .slick-slide {
     width: 256px !important;
     position: relative;
@@ -309,6 +364,10 @@ h6 {
     border-radius: 50%;
     position: relative;
     z-index: 20; }
+    @media only screen and (max-width: 767px) {
+      .slider .slick-prev,
+      .slider .slick-next {
+        padding: 27px; } }
     .slider .slick-prev:after,
     .slider .slick-next:after {
       content: "";
@@ -326,12 +385,33 @@ h6 {
     .slider .slick-prev:after {
       top: 22px;
       transform: rotate(180deg); }
-  .slider .slick-next {
-    left: -14px; }
+      @media only screen and (max-width: 767px) {
+        .slider .slick-prev:after {
+          top: 19px;
+          left: 17px; } }
+  @media only screen and (max-width: 767px) {
+    .slider .draggable {
+      padding: 0 !important;
+      height: 455px; } }
   .slider .slick-arrow {
     position: absolute;
     top: 50%;
     transform: translate(0, -50%); }
+    @media only screen and (max-width: 767px) {
+      .slider .slick-arrow {
+        top: -160px;
+        transform: none;
+        right: 3px; } }
+  .slider .slick-next {
+    left: -14px; }
+    @media only screen and (max-width: 767px) {
+      .slider .slick-next {
+        left: auto;
+        right: 65px; } }
+    @media only screen and (max-width: 767px) {
+      .slider .slick-next:after {
+        top: 20px;
+        left: 17px; } }
 
 .footer {
   padding: 30px 0; }
@@ -340,6 +420,9 @@ h6 {
   display: flex;
   justify-content: space-between;
   align-items: center; }
+  @media only screen and (max-width: 767px) {
+    .footer-area {
+      flex-direction: column; } }
   .footer-area .footer-navigation {
     display: flex; }
     .footer-area .footer-navigation li {
@@ -360,6 +443,11 @@ h6 {
 
 .log-in-page .authorization-form {
   margin-bottom: 45px; }
+  @media only screen and (max-width: 767px) {
+    .log-in-page .authorization-form {
+      display: flex;
+      flex-direction: column;
+      align-items: center; } }
   .log-in-page .authorization-form .title-authorization {
     text-align: center;
     font-size: 30px;
@@ -369,6 +457,9 @@ h6 {
   .log-in-page .authorization-form .form-group {
     width: 355px;
     margin-bottom: 20px; }
+    @media only screen and (max-width: 767px) {
+      .log-in-page .authorization-form .form-group {
+        width: 287px; } }
     .log-in-page .authorization-form .form-group input {
       width: 100%;
       height: 70px;
@@ -403,6 +494,10 @@ h6 {
     display: flex;
     align-items: center;
     border: solid 1px #4968AD; }
+    @media only screen and (max-width: 767px) {
+      .log-in-page .socials-btn .btn-facebook,
+      .log-in-page .socials-btn .btn-google {
+        padding: 15px 25px; } }
     .log-in-page .socials-btn .btn-facebook i,
     .log-in-page .socials-btn .btn-google i {
       font-size: 20px;
@@ -419,6 +514,9 @@ h6 {
   line-height: 25px;
   color: #311746;
   margin-bottom: 45px; }
+  @media only screen and (max-width: 767px) {
+    .log-in-page .excerpt {
+      padding-left: 0; } }
   .log-in-page .excerpt a {
     color: #E73348;
     text-decoration: underline;
@@ -429,78 +527,3 @@ h6 {
 .log-in-page .footer-area {
   display: flex;
   justify-content: flex-end; }
-
-@media (max-width: 1115px) {
-  .authors-heading {
-    padding: 0; } }
-
-@media (max-width: 1023px) {
-  .header {
-    padding: 20px 0 0;
-    margin-bottom: 20px; }
-  .authors-heading {
-    padding: 0; }
-  .slider {
-    margin-bottom: 35px; } }
-
-@media (max-width: 767px) {
-  .header {
-    padding: 35px 0 0;
-    margin-bottom: 14px; }
-  .header-content {
-    padding: 0; }
-    .header-content .logo img {
-      width: 170px; }
-    .header-content .username-block .user img {
-      width: 40px; }
-  .btn-menu {
-    display: none; }
-  .menu-navigation {
-    top: 55px; }
-    .menu-navigation .navigation .mobile-block {
-      display: block; }
-      .menu-navigation .navigation .mobile-block .text-user {
-        display: block; }
-  .text-user {
-    display: none; }
-  .username img {
-    width: 45px; }
-  .authors-heading {
-    flex-direction: column;
-    align-items: end;
-    margin-bottom: 25px; }
-    .authors-heading .title-authors {
-      font-size: 36px;
-      line-height: 44px;
-      max-width: 170px;
-      margin-bottom: 15px; }
-    .authors-heading .form-group {
-      width: 290px; }
-  .slider .slick-arrow {
-    top: -160px;
-    transform: none;
-    right: 3px; }
-  .slider .slick-prev,
-  .slider .slick-next {
-    padding: 27px; }
-  .slider .slick-next {
-    left: auto;
-    right: 65px; }
-  .slider .slick-prev:after {
-    top: 19px;
-    left: 17px; }
-  .slider .slick-next:after {
-    top: 20px;
-    left: 17px; }
-  .slider .draggable {
-    padding: 0 !important;
-    height: 455px; }
-  .footer-area {
-    flex-direction: column; }
-  .log-in-page .authorization-form .form-group {
-    width: 287px; }
-  .log-in-page .socials-area .socials-btn .btn-facebook,
-  .log-in-page .socials-area .socials-btn .btn-google {
-    padding: 15px 25px; }
-  .log-in-page .socials-area .excerpt {
-    padding-left: 0; } }

@@ -13,6 +13,12 @@
   .authorization-form {
     margin-bottom: 45px;
 
+    @include breakpoint($mobile) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
     .title-authorization {
       text-align: center;
       font-size: 30px;
@@ -24,6 +30,10 @@
     .form-group {
       width: 355px;
       margin-bottom: 20px;
+
+      @include breakpoint($mobile) {
+        width: 287px;
+      }
 
       input {
         width: 100%;
@@ -69,6 +79,10 @@
         align-items: center;
         border: solid 1px $dark-violet;
 
+        @include breakpoint($mobile) {
+          padding: 15px 25px;
+        }
+
         i {
           font-size: 20px;
           color: $dark-violet;
@@ -91,6 +105,10 @@
     line-height: 25px;
     color: $purple;
     margin-bottom: 45px;
+
+    @include breakpoint($mobile) {
+      padding-left: 0;
+    }
 
     a {
       color: $red;

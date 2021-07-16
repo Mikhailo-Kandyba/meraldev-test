@@ -9,6 +9,10 @@
   width: 210px;
   background: $white;
 
+  @include breakpoint($mobile) {
+    top: 55px;
+  }
+
 
   .navigation {
     display: flex;
@@ -22,6 +26,16 @@
     .mobile-block {
       display: none;
       text-align: center;
+
+      @include breakpoint($mobile) {
+        display: block;
+      }
+    }
+
+    .text-user {
+      @include breakpoint($mobile) {
+        display: block;
+      }
     }
 
     li {
@@ -55,6 +69,10 @@
   padding: 24px;
   position: relative;
   margin-left: 55px;
+
+  @include breakpoint($mobile) {
+    display: none;
+  }
 
   &:after {
     content: '';
