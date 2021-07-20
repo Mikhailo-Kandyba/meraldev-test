@@ -1,128 +1,151 @@
 @import "variables";
-.log-in-page {
-  .header {
-    margin-bottom: 0;
+@import "mixin";
+
+.header {
+  margin-bottom: 0;
+
+  @include breakpoint($mobile) {
+    padding: 15px 0 0;
+    margin-bottom: 10px;
   }
+}
 
-  .log-in-form {
-    max-width: 355px;
-    margin-right: auto;
-    margin-left: auto;
-  }
+.log-in-form {
+  max-width: 355px;
+  margin-right: auto;
+  margin-left: auto;
+}
 
-  .authorization-form {
-    margin-bottom: 45px;
+.authorization-form {
+  margin-bottom: 45px;
 
-    @include breakpoint($mobile) {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-
-    .title-authorization {
-      text-align: center;
-      font-size: 30px;
-      line-height: 41px;
-      color: $purple;
-      margin-bottom: 38px;
-    }
-
-    .form-group {
-      width: 355px;
-      margin-bottom: 20px;
-
-      @include breakpoint($mobile) {
-        width: 287px;
-      }
-
-      input {
-        width: 100%;
-        height: 70px;
-        font-size: 16px;
-        line-height: 16px;
-        padding: 8px 16px;
-        border: none;
-        box-shadow: 0 0 13px -4px rgba(34, 60, 80, 0.2);
-
-        &::placeholder {
-          font-size: 18px;
-          line-height: 25px;
-          color: $beige;
-        }
-
-        &:focus {
-          outline: none;
-        }
-      }
-    }
-  }
-
-  .title-socials {
-    text-align: center;
-    font-size: 24px;
-    line-height: 33px;
-    color: $purple;
-    margin-bottom: 19px;
-  }
-
-  .socials-btn {
-      display: flex;
-      justify-content: space-between;
-      margin-bottom: 40px;
-
-      .btn-facebook,
-      .btn-google {
-        padding: 19px 37px;
-        color: $dark-violet;
-        border-radius: 3px;
-        display: flex;
-        align-items: center;
-        border: solid 1px $dark-violet;
-
-        @include breakpoint($mobile) {
-          padding: 15px 25px;
-        }
-
-        i {
-          font-size: 20px;
-          color: $dark-violet;
-          padding-right: 12px;
-        }
-      }
-
-      .btn-google {
-        border: solid 1px $red;
-        color: $red;
-
-        i {
-          color: $red;
-        }
-      }
-    }
-
-  .excerpt {
-    font-size: 18px;
-    line-height: 25px;
-    color: $purple;
-    margin-bottom: 45px;
-
-    @include breakpoint($mobile) {
-      padding-left: 0;
-    }
-
-    a {
-      color: $red;
-      text-decoration: underline;
-      padding-left: 12px;
-
-      &:hover {
-        text-decoration: none;
-      }
-    }
-  }
-
-  .footer-area {
+  @include breakpoint($mobile) {
     display: flex;
-    justify-content: flex-end;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .title-authorization {
+    text-align: center;
+    font-size: 30px;
+    line-height: 41px;
+    color: $purple;
+    margin-bottom: 38px;
+
+    @include breakpoint($mobile) {
+      margin-bottom: 15px;
+    }
+  }
+
+  .form-group {
+    width: 355px;
+    margin-bottom: 20px;
+
+    @include breakpoint($mobile) {
+      width: 100%;
+    }
+
+    input {
+      width: 100%;
+      height: 70px;
+      font-size: 16px;
+      line-height: 16px;
+      padding: 8px 16px;
+      border: none;
+      box-shadow: 0 0 13px -4px rgba(34, 60, 80, 0.2);
+
+      &::placeholder {
+        font-size: 18px;
+        line-height: 25px;
+        color: $beige;
+      }
+
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+}
+
+.title-socials {
+  text-align: center;
+  font-size: 24px;
+  line-height: 33px;
+  color: $purple;
+  margin-bottom: 20px;
+
+  @include breakpoint($mobile) {
+    margin-bottom: 15px;
+  }
+}
+
+.socials-btn {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 40px;
+
+  @include breakpoint($mobile) {
+    margin-bottom: 20px;
+  }
+
+  .btn-facebook,
+  .btn-google {
+    padding: 19px 37px;
+    color: $dark-violet;
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    border: solid 1px $dark-violet;
+
+    &:hover {
+      background: $light-purple;
+      border: solid 1px $light-purple;
+    }
+
+    @include breakpoint($mobile) {
+      padding: 15px 25px;
+    }
+
+    i {
+      font-size: 20px;
+      color: $dark-violet;
+      padding-right: 12px;
+    }
+  }
+
+  .btn-google {
+    border: solid 1px $red;
+    color: $red;
+
+    &:hover {
+      background: $light-red;
+      border: solid 1px $light-red;
+    }
+
+    i {
+      color: $red;
+    }
+  }
+}
+
+.excerpt {
+  font-size: 18px;
+  line-height: 25px;
+  color: $purple;
+  margin-bottom: 45px;
+
+  @include breakpoint($mobile) {
+    padding-left: 0;
+    margin-bottom: 20px;
+  }
+
+  a {
+    color: $red;
+    text-decoration: underline;
+    padding-left: 12px;
+
+    &:hover {
+      text-decoration: none;
+    }
   }
 }

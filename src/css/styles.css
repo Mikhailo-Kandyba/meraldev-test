@@ -54,7 +54,7 @@ a {
   color: #311746;
   text-decoration: none; }
   a:hover {
-    color: #502a70; }
+    color: #95aee5; }
   a:focus {
     outline: none; }
 
@@ -113,18 +113,16 @@ h6 {
     background: transparent;
     color: #E73348;
     border: 1px solid #E73348; }
-
-.btn-xl {
-  font-size: 20px;
-  line-height: 24px;
-  font-weight: 700;
-  width: 100%; }
-
-.btn-ml {
-  padding: 15px 25px; }
-
-.btn-transparent {
-  background: transparent; }
+  .btn-xl {
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: 700; }
+  .btn-block {
+    width: 100%; }
+  .btn-ml {
+    padding: 15px 25px; }
+  .btn-transparent {
+    background: transparent; }
 
 .menu-navigation {
   position: absolute;
@@ -154,7 +152,10 @@ h6 {
           display: block; } }
     @media only screen and (max-width: 767px) {
       .menu-navigation .navigation .text-user {
-        display: block; } }
+        display: block;
+        margin-left: 0;
+        margin-bottom: 20px;
+        border-bottom: solid 1px #E73348; } }
     .menu-navigation .navigation li {
       position: relative;
       margin-bottom: 0;
@@ -224,6 +225,8 @@ h6 {
     .header-content .username-block .user {
       display: flex;
       align-items: center; }
+      .header-content .username-block .user:hover {
+        cursor: pointer; }
       .header-content .username-block .user img {
         width: 50px; }
         @media only screen and (max-width: 767px) {
@@ -237,7 +240,7 @@ h6 {
   @media only screen and (max-width: 767px) {
     .text-user {
       display: none; } }
-  .text-user h3 {
+  .text-user p {
     font-size: 14px;
     line-height: 20px; }
   .text-user .name {
@@ -271,14 +274,14 @@ h6 {
         line-height: 44px;
         max-width: 170px;
         margin-bottom: 15px; } }
-    .authors-heading .title-authors b {
+    .authors-heading .title-authors span {
       color: #311746; }
   .authors-heading .form-group {
-    width: 260px;
+    width: 100%;
     position: relative; }
     @media only screen and (max-width: 767px) {
       .authors-heading .form-group {
-        width: 290px; } }
+        width: 100%; } }
     .authors-heading .form-group:after {
       content: "";
       position: absolute;
@@ -312,7 +315,7 @@ h6 {
     width: 256px !important;
     position: relative;
     overflow: hidden;
-    height: 430px;
+    height: 460px;
     margin: 0 22px; }
     .slider .slick-slide:hover .content-img .title {
       display: none; }
@@ -383,7 +386,7 @@ h6 {
   .slider .slick-prev {
     right: -14px; }
     .slider .slick-prev:after {
-      top: 22px;
+      top: 28px;
       transform: rotate(180deg); }
       @media only screen and (max-width: 767px) {
         .slider .slick-prev:after {
@@ -433,34 +436,41 @@ h6 {
     color: #311746;
     opacity: 0.5; }
 
-.log-in-page .header {
+.header {
   margin-bottom: 0; }
+  @media only screen and (max-width: 767px) {
+    .header {
+      padding: 15px 0 0;
+      margin-bottom: 10px; } }
 
-.log-in-page .log-in-form {
+.log-in-form {
   max-width: 355px;
   margin-right: auto;
   margin-left: auto; }
 
-.log-in-page .authorization-form {
+.authorization-form {
   margin-bottom: 45px; }
   @media only screen and (max-width: 767px) {
-    .log-in-page .authorization-form {
+    .authorization-form {
       display: flex;
       flex-direction: column;
       align-items: center; } }
-  .log-in-page .authorization-form .title-authorization {
+  .authorization-form .title-authorization {
     text-align: center;
     font-size: 30px;
     line-height: 41px;
     color: #311746;
     margin-bottom: 38px; }
-  .log-in-page .authorization-form .form-group {
+    @media only screen and (max-width: 767px) {
+      .authorization-form .title-authorization {
+        margin-bottom: 15px; } }
+  .authorization-form .form-group {
     width: 355px;
     margin-bottom: 20px; }
     @media only screen and (max-width: 767px) {
-      .log-in-page .authorization-form .form-group {
-        width: 287px; } }
-    .log-in-page .authorization-form .form-group input {
+      .authorization-form .form-group {
+        width: 100%; } }
+    .authorization-form .form-group input {
       width: 100%;
       height: 70px;
       font-size: 16px;
@@ -468,62 +478,76 @@ h6 {
       padding: 8px 16px;
       border: none;
       box-shadow: 0 0 13px -4px rgba(34, 60, 80, 0.2); }
-      .log-in-page .authorization-form .form-group input::placeholder {
+      .authorization-form .form-group input::placeholder {
         font-size: 18px;
         line-height: 25px;
         color: #837490; }
-      .log-in-page .authorization-form .form-group input:focus {
+      .authorization-form .form-group input:focus {
         outline: none; }
 
-.log-in-page .title-socials {
+.title-socials {
   text-align: center;
   font-size: 24px;
   line-height: 33px;
   color: #311746;
-  margin-bottom: 19px; }
+  margin-bottom: 20px; }
+  @media only screen and (max-width: 767px) {
+    .title-socials {
+      margin-bottom: 15px; } }
 
-.log-in-page .socials-btn {
+.socials-btn {
   display: flex;
   justify-content: space-between;
   margin-bottom: 40px; }
-  .log-in-page .socials-btn .btn-facebook,
-  .log-in-page .socials-btn .btn-google {
+  @media only screen and (max-width: 767px) {
+    .socials-btn {
+      margin-bottom: 20px; } }
+  .socials-btn .btn-facebook,
+  .socials-btn .btn-google {
     padding: 19px 37px;
     color: #4968AD;
     border-radius: 3px;
     display: flex;
     align-items: center;
     border: solid 1px #4968AD; }
+    .socials-btn .btn-facebook:hover,
+    .socials-btn .btn-google:hover {
+      background: #95aee5;
+      border: solid 1px #95aee5; }
     @media only screen and (max-width: 767px) {
-      .log-in-page .socials-btn .btn-facebook,
-      .log-in-page .socials-btn .btn-google {
+      .socials-btn .btn-facebook,
+      .socials-btn .btn-google {
         padding: 15px 25px; } }
-    .log-in-page .socials-btn .btn-facebook i,
-    .log-in-page .socials-btn .btn-google i {
+    .socials-btn .btn-facebook i,
+    .socials-btn .btn-google i {
       font-size: 20px;
       color: #4968AD;
       padding-right: 12px; }
-  .log-in-page .socials-btn .btn-google {
+  .socials-btn .btn-google {
     border: solid 1px #E73348;
     color: #E73348; }
-    .log-in-page .socials-btn .btn-google i {
+    .socials-btn .btn-google:hover {
+      background: #e59ea5;
+      border: solid 1px #e59ea5; }
+    .socials-btn .btn-google i {
       color: #E73348; }
 
-.log-in-page .excerpt {
+.excerpt {
   font-size: 18px;
   line-height: 25px;
   color: #311746;
   margin-bottom: 45px; }
   @media only screen and (max-width: 767px) {
-    .log-in-page .excerpt {
-      padding-left: 0; } }
-  .log-in-page .excerpt a {
+    .excerpt {
+      padding-left: 0;
+      margin-bottom: 20px; } }
+  .excerpt a {
     color: #E73348;
     text-decoration: underline;
     padding-left: 12px; }
-    .log-in-page .excerpt a:hover {
+    .excerpt a:hover {
       text-decoration: none; }
 
-.log-in-page .footer-area {
+.justify-content {
   display: flex;
   justify-content: flex-end; }

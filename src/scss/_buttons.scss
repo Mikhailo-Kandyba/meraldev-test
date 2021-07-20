@@ -1,4 +1,6 @@
 @import "variables";
+@import "mixin";
+
 .btn {
   font-size: 16px;
   line-height: 21px;
@@ -13,19 +15,22 @@
     color: $red;
     border: 1px solid $red;
   }
-}
 
-.btn-xl {
-  font-size: 20px;
-  line-height: 24px;
-  font-weight: 700;
-  width: 100%;
-}
+  &-xl {
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: 700;
+  }
 
-.btn-ml {
-  padding: 15px 25px;
-}
+  &-block {
+    width: 100%;
+  }
 
-.btn-transparent {
-  background: transparent;
+  &-ml {
+    padding: 15px 25px;
+  }
+
+  &-transparent {
+    background: transparent;
+  }
 }
